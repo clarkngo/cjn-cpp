@@ -1,6 +1,14 @@
 # MacOS C++ Project Setup in VS Code
 
-## How to Use
+## Workflow
+
+1 -	Copy .vscode and add to your project folder
+
+2 -	Modify `launch.json`. Your program path should be `${workspaceFolder}/yourfilename.out`. Hit save.
+
+3 -	Modify `tasks.json`. Your arguments should include `yourfilename.cpp` and `yourfilename.out`. Hit save.
+
+## Step by Step
 - Click `.vscode.zip`
 - Click Download
 - Choose the location of your project folder
