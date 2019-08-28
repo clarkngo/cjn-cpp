@@ -1,16 +1,17 @@
-# Windows C++ Project Setup in VS Code
+# MacOS C++ Project Setup in VS Code
 
 ## How to Use
 - Click `.vscode.zip`
 - Click Download
 - Choose the location of your project folder
 
-Sample working C++ project directory structure:
+Sample working C++ project directory structure
 ```
 | hello
 |_ .vscode
  |_ c_cpp_properties.json
  |_ launch.json 
+ |_ settings.json
  |_ tasks.json
 |_ hello.cpp
 ```
@@ -21,15 +22,17 @@ Note: You have to have `.vscode` folder and files in every C++ project folder.
 - To easily use this, just replace `filename` with your own, i.e. change to `hello`.
 - In `launch.json`: 
 ```
-            "program": "${workspaceFolder}/filename.exe"
+            "program": "${workspaceFolder}/filename.out",
 ```
 - In `tasks.json`:
 ```
             "args": [
-                "-g",
+                "-std=c++17",
+                "-stdlib=libc++",
+                "filename.cpp",
                 "-o",
-                "filename",
-                "filename.cpp"
+                "filename.out",
+                "--debug"
 ```
 
 ## Contents of the Files
@@ -42,17 +45,16 @@ The following files are included in .vscode:
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "intelliSenseMode": "gcc-x64",
-            "compilerPath": "C:\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\g++.exe"
+            "defines": [],
+            "macFrameworkPath": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "${default}"
         }
     ],
     "version": 4
@@ -66,26 +68,34 @@ The following files are included in .vscode:
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/filename.exe",
+            "program": "${workspaceFolder}/filename.out",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
-            "MIMode": "gdb",
-            "miDebuggerPath": "C:\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
+            "MIMode": "lldb",
+            "logging": {
+                "trace": true,
+                "traceResponse": true,
+                "engineLogging": true
+            }
         }
     ]
+  }
+```
+
+`settings.json`
+
+```
+{
+  "files.associations": {
+    "*.html": "html",
+    "ostream": "cpp"
+  }
 }
 ```
 
@@ -96,14 +106,16 @@ The following files are included in .vscode:
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build hello world",
+            "label": "Build with Clang",
             "type": "shell",
-            "command": "g++",
+            "command": "clang++",
             "args": [
-                "-g",
+                "-std=c++17",
+                "-stdlib=libc++",
+                "filename.cpp",
                 "-o",
-                "filename",
-                "filename.cpp"
+                "filename.out",
+                "--debug"
             ],
             "group": {
                 "kind": "build",
