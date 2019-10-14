@@ -76,7 +76,7 @@ class Shape
 
 int main()
 {
-  Shape myShape;
+  Shape myShape;      // instantiate Shape class
 
   myShape.messagePrompt();
 

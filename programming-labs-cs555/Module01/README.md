@@ -1,6 +1,13 @@
 # Programming Lab 1
 In plain English and drawings (aka flow chart), design classes that calculate the area of circle and rectangle. You are answering how your program would (1) prompt a user to select either "circle" or "rectangle" followed by asking the necessary dimensions. Once the user enters the valid input, the program then calculates the area and prints the final value. If not a valid input, you can utilize a while loop or infinite loop.
 
+## Video Walkthrough and Demo
+[![PL01 Demo](http://img.youtube.com/vi/Fec5_JdnzZs/0.jpg)](https://www.youtube.com/watch?v=Fec5_JdnzZs "PL01 Demo")
+
+
+## Project Location
+- https://github.com/clarkngo/cpp-projects/tree/master/programming-labs-cs555/Module01
+
 ## Software requirements
 - C++17
 - Compiler
