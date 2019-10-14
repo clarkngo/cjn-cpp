@@ -4,24 +4,28 @@
 
 using namespace std;
 
-class Shape {
+class Shape
+{
   public:
     // calculate area of circle
     // input type: double
     // return type: double
-    double area(double radius) {
+    double area(double radius)
+    {
       const double PI = 3.14;
       return PI * (radius * radius);
     }
     // calculate area of rectangle
     // input type: double, double
     // return type: double
-    double area(double length, double width) {
+    double area(double length, double width)
+    {
       return length * width;
     }
 
     // prompt user
-    void messagePrompt() {
+    void messagePrompt()
+    {
       char choose;
       double num1;
       double num2;
@@ -29,11 +33,12 @@ class Shape {
       cout << "Please choose 'c' for circle or 'r' for rectangle (c/r):\n";
       cin >> choose;
 
-      while(choose != 'c' && choose != 'r') {
+      while(choose != 'c' && choose != 'r')
+      {
         cout << "ERROR: Choose 'c' for circle or 'r' for rectangle (c/r):\n";
         cin >> choose;
       }
-
+      // circle
       if (choose == 'c')
       {
         cout << "Enter number for radius:\n";
@@ -43,9 +48,10 @@ class Shape {
           cin.clear();            // clear previous input
           cin.ignore(1, '\n');    // discard previous input
         }
-
+        cout << "Area of circle is: ";
         cout << fixed << setprecision(2) << area(num1);
       }
+      // rectangle
       else
       {
         cout << "Enter number for length:\n";
@@ -62,13 +68,14 @@ class Shape {
           cin.clear();            // clear previous input
           cin.ignore(1, '\n');    // discard previous input
         }
-
+        cout << "Area of rectangle is: ";
         cout << fixed << setprecision(2) << area(num1, num2);
       }
     }
 };
 
-int main() {
+int main()
+{
   Shape myShape;
 
   myShape.messagePrompt();

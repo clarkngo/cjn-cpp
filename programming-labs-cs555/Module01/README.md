@@ -18,9 +18,9 @@ Please follow instructions on:
 1. If a Windows user, please replace `.vscode` contents with `windows/.vscode`.
 2. VS Code Menu > Terminal > Run Build Task
 3. Run
-- Mac: `./circ_rect.cpp`
-- Windows powershell: `./circ_rect.cpp`
-- Windows cmd: `circ_rect.cpp`
+- Mac: `./circ_rect.out`
+- Windows powershell: `./circ_rect.exe`
+- Windows cmd: `circ_rect.exe`
 
 ## Project Requirements
 - C++
@@ -55,3 +55,13 @@ Please follow instructions on:
 
 ### Back to original branch
 - End of Program
+
+# Support
+Bug reports and feature requests can be filed with the rest for the Ruby on Rails project here:
+
+[File Bug Reports and Features](https://github.com/clarkngo/cpp-projects/issues)
+# License
+Released under the MIT license.
+
+# Copyright
+&copy; Copyright 2019 Clark Jason Ngo. All Rights Reserved.
