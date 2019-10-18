@@ -48,6 +48,15 @@ Please follow instructions on:
 - The comparator function takes two pointers as arguments (both type-casted to const void*) and defines the order of the elements by returning (in a stable and transitive manner
 - Source: https://www.geeksforgeeks.org/comparator-function-of-qsort-in-c/
 
+```
+int comparator (const void * a, const void * b)
+{
+  return ( *(int*)a - *(int*)b );
+}
+```
+- the `comparator` function type-casts the parameters as void (undefined data type) and accesses the value through pointers
+- in the `return` statement, the parameter are type-casted to `int`
+
 `void *`
 - When used as a function return type, the void keyword specifies that the function does not return a value. When used for a function's parameter list, void specifies that the function takes no parameters. When used in the declaration of a pointer, void specifies that the pointer is "universal."
 - If a pointer's type is void *, the pointer can point to any variable that is not declared with the const or volatile keyword. A void pointer cannot be dereferenced unless it is cast to another type. A void pointer can be converted into any other type of data pointer.
