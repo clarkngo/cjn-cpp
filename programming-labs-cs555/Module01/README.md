@@ -66,6 +66,7 @@ Please follow instructions on:
 ### Discussion / Future Improvements
 - function overloading won't work if need area for Triangle because of same number of parameters
 - use inheritance then virtual function for `area()`
+- Base Class `Shape`, Derived Classes `Rectangle` and `Circle`
 
 # Support
 Bug reports and feature requests can be filed with the rest for the Ruby on Rails project here:
