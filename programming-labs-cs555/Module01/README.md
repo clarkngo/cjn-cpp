@@ -63,6 +63,10 @@ Please follow instructions on:
 ### Back to original branch
 - End of Program
 
+### Discussion / Future Improvements
+- function overloading won't work if need area for Triangle because of same number of parameters
+- use inheritance then virtual function for `area()`
+
 # Support
 Bug reports and feature requests can be filed with the rest for the Ruby on Rails project here:
 
