@@ -36,7 +36,25 @@ Please follow instructions on:
 
 ## Program Flow
 - Execute program
-
+- sets the seed which is used by rand to generate “random” numbers
+- declare and initialize variables M, N with value of `5`
+- initialize arrays:
+  - `A` with length of `M`
+  - `B` with length of `N`
+  - `C` with length of `M + N`
+- Array `A`:
+  - call `populateArray()` function to add random numbers to array `A`
+  - call `qsort()` function from C library to sort array `A` ascending.
+  - call `printArray()` function to print elements of array `A`
+  populateArray(A, M);
+- Array `B`:
+  - call `populateArray()` function to add random numbers to array `B`
+  - call `qsort()` from C library to sort array `B` descending.
+  - call `printArray()` function to print elements of array `B`
+- Array `C`:
+  - call `mergeArrays()` function to merge array `A` and `B`
+  - call `qsort()` from C library to sort array `C` ascending.
+  - call `printArray()` function to print elements of array `C`
 - End of Program
 
 # Errors Encountered
