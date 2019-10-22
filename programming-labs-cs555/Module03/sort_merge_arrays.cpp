@@ -14,7 +14,7 @@ void populateArray(int arr[], int length)
 
 void printArray(int arr[], int length)
 {
-  cout << "[" << arr[0];
+  cout << "[" << arr[0];    // fence post
   for (int i = 1; i < length; i++)
   {
     cout << ", "<< arr[i];
