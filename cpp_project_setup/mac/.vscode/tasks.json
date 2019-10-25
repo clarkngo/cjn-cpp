@@ -8,9 +8,9 @@
             "args": [
                 "-std=c++17",
                 "-stdlib=libc++",
-                "filename.cpp",
+                "main.cpp",
                 "-o",
-                "filename.out",
+                "main.out",
                 "--debug"
             ],
             "group": {
