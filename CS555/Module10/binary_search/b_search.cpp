@@ -26,7 +26,7 @@ int binarySearch(int arr[], int l, int r, int x)
   // not present
   return -1;
 }
-
+  
 int main(void)
 {
   int arr[] = { 2, 3, 4, 10, 40 };
