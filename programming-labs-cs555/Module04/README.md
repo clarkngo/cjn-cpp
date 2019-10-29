@@ -72,7 +72,7 @@ time sum(Time time) // to sum two time object & return time
 - create a helper function for converting minutes that are equal or greater than 60 to add 1 hour
 
 # Support
-Bug reports and feature requests can be filed with the rest for the Ruby on Rails project here:
+Bug reports and feature requests can be filed here:
 
 [File Bug Reports and Features](https://github.com/clarkngo/cpp-projects/issues)
 # License

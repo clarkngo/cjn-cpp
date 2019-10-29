@@ -69,7 +69,7 @@ Please follow instructions on:
 - Base Class `Shape`, Derived Classes `Rectangle` and `Circle`
 
 # Support
-Bug reports and feature requests can be filed with the rest for the Ruby on Rails project here:
+Bug reports and feature requests can be filed here:
 
 [File Bug Reports and Features](https://github.com/clarkngo/cpp-projects/issues)
 # License
