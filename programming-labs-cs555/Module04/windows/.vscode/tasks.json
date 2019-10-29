@@ -8,8 +8,8 @@
             "args": [
                 "-g",
                 "-o",
-                "circ_rect",
-                "circ_rect.cpp"
+                "time",
+                "time.cpp"
             ],
             "group": {
                 "kind": "build",
