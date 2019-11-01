@@ -69,6 +69,7 @@ int main()
   cout << "Array B: ";
   printArray(B, M);
 
+  // void mergeArrays(arr1,  arr2, lenOfArr1, lenOfArr2, arr3)
   mergeArrays(A, B, M, N, C);
   qsort (C, M+N, sizeof(int), compareAscending);
   cout << "Array C: ";
