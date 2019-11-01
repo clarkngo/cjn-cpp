@@ -15,7 +15,7 @@ time sum(time) // to sum two time object & return time
 [![PL04 Demo](http://img.youtube.com/vi/VumClstM4AA/0.jpg)](https://www.youtube.com/watch?v=VumClstM4AA "PL04 Demo")
 
 ## Project Location
-- https://github.com/clarkngo/cpp-projects/tree/master/programming-labs-cs555/Module03
+- https://github.com/clarkngo/cpp-projects/tree/master/programming-labs-cs555/Module04
 
 ## Software requirements
 - C++17
