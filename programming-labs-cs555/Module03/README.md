@@ -86,6 +86,34 @@ Using `const` and `*` deference operator
 - A `const void*` means a pointer to some data that cannot be changed. In order to read it, yes, you have to cast it to concrete types such as `char`. But I said reading, not writing, which, again, is UB (Undefined Behavior).
 - Source: https://stackoverflow.com/questions/34842224/when-to-use-const-void
 
+# From Classroom Session
+Stack = if you know the size
+Heap = if you don’t know the size
+
+PRS = Pass-by-Reference is Shallow Copy
+-	Are always address
+-	Keeps the value
+
+PBV = Pass-by-Value is Deep Copy
+
+Array are pass-by-reference
+
+```
+int arr[10];
+cout << arr; // mem address
+```
+If you need to pass them to functions, you need to have `int* p` as parameter
+
+Length of array = `int a[10] / sizeof(a[0])`
+
+or
+
+Length of array = `int a[10] / sizeof(int)`
+
+when an array is passed in a function you can only get the memory address of the first element.
+
+
+
 # Future Improvements
 
 
