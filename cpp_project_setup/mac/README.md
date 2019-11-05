@@ -4,10 +4,10 @@
 - [Initial Setup](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#initial-setup)
   - [Installing C++ extension for VS Code](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#installing-c-extension-for-vs-code)
   - [Working in the project folder](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#working-in-the-project-folder)
-  - [For MacOS users](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#for-macos-users)
+  - [For Windows users](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#for-windows-users)
   - [Our first Hello](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#our-first-hello)
 - [Workflow](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#workflow)
-  - [Step by step]
+  - [Step by step](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#step-by-step)
 - [Contents of the Files](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#contents-of-the-files)
   - [`c_cpp_properties.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#c_cpp_propertiesjson)
   - [`launch.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#c_cpp_propertiesjson)
@@ -52,8 +52,14 @@ code .
 Full installation reference: https://code.visualstudio.com/docs/cpp/config-clang-mac
 
 1)	Open your VS Code.
+
 2)	Click Open Folder.
 
+Note: Follow Local machine step if for personal projects, else follow GitHub repository for classroom submission.
+
+#### Local machine
+Create a new folder and name it `project1`
+#### GitHub repository
 If you are an online student:
 Open CS555_Fall_2019/ON/Yourname/Module1. ( File > Open )
 
@@ -129,7 +135,7 @@ New files will be created.
 
 Sample working C++ project directory structure
 ```
-| hello
+| project1
 |_ .vscode
  |_ c_cpp_properties.json
  |_ launch.json

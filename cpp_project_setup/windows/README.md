@@ -1,4 +1,19 @@
 # Windows C++ Project Setup in VS Code
+
+# Table of Contents
+- [Initial Setup](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#initial-setup)
+  - [Installing C++ extension for VS Code](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#installing-c-extension-for-vs-code)
+  - [Working in the project folder](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#working-in-the-project-folder)
+  - [For MacOS users](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#for-macos-users)
+  - [Our first Hello](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#our-first-hello)
+- [Workflow](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#workflow)
+  - [Step by step](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#step-by-step)
+- [Contents of the Files](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#contents-of-the-files)
+  - [`c_cpp_properties.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#c_cpp_propertiesjson)
+  - [`launch.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#c_cpp_propertiesjson)
+  - [`tasks.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/windows#c_cpp_propertiesjson)
+- Modifying for Project Use with Header and Source and Implementation files
+
 ## Initial Setup
 ### Installing C++ extension for VS Code
 1)	Open your VS Code. On the left side bar, click Extensions Icon. A search field will pop up, type c++ in the search field then hit Enter. A list will populate below the search field. Click C/C++ then a description on the right will appear. Click Install.
@@ -83,6 +98,11 @@ Open VS Code
 1)	Open your VS Code.
 2)	Click Open Folder.
 
+Note: Follow Local machine step if for personal projects, else follow GitHub repository for classroom submission.
+
+#### Local machine
+Create a new folder and name it `project1`
+#### GitHub repository
 If you are an online student:
 Open CS555_Fall_2019/ON/Yourname/Module1. ( File > Open )
 
@@ -95,7 +115,7 @@ Open CS555_Fall_2019/IN/Yourname/Module1. ( File > Open )
 
 <img src="images/15.png" width="400" height="500"/>
 
-2)	Create a hello.cpp file. Please add the following code:
+2)	Create a main.cpp file. Please add the following code:
 
 <img src="images/16.png" width="500" height="300"/>
 
@@ -117,23 +137,22 @@ New files will be created.
 
 Powershell:
 ```
-./hello.exe
+./main.exe
 ```
 Command Prompt:
 ```
-hello.exe
+main.exe
 ```
+
+File Explorer:
+- Double-click `main.exe`
 
 <img src="images/20.png" width="800" height="150"/>
 
 
 ## Workflow
 
-1 -	Copy .vscode and add to your project folder
-
-2 -	Modify `launch.json`. Your program path should be `${workspaceFolder}/yourfilename.out`. Hit save.
-
-3 -	Modify `tasks.json`. Your arguments should include `yourfilename.cpp` and `yourfilename.out`. Hit save.
+Copy .vscode and add to your project folder
 
 ## Step by Step
 - Click `.vscode.zip`
@@ -142,36 +161,21 @@ hello.exe
 
 Sample working C++ project directory structure:
 ```
-| hello
+| project1
 |_ .vscode
  |_ c_cpp_properties.json
  |_ launch.json
  |_ tasks.json
-|_ hello.cpp
+|_ main.cpp
 ```
 
 Note: You have to have `.vscode` folder and files in every C++ project folder.
-
-## Modifying for Project Use
-- To easily use this, just replace `filename` with your own, i.e. change to `hello`.
-- In `launch.json`:
-```
-            "program": "${workspaceFolder}/filename.exe"
-```
-- In `tasks.json`:
-```
-            "args": [
-                "-g",
-                "-o",
-                "filename",
-                "filename.cpp"
-```
 
 ## Contents of the Files
 
 The following files are included in .vscode:
 
-`c_cpp_properties.json`
+### `c_cpp_properties.json`
 
 ```
 {
@@ -194,7 +198,7 @@ The following files are included in .vscode:
 }
 ```
 
-`launch.json`
+### `launch.json`
 
 ```
 {
@@ -204,7 +208,7 @@ The following files are included in .vscode:
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/filename.exe",
+            "program": "${workspaceFolder}/main.exe",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
@@ -224,7 +228,7 @@ The following files are included in .vscode:
 }
 ```
 
-`tasks.json`
+### `tasks.json`
 
 ```
 {
@@ -237,8 +241,8 @@ The following files are included in .vscode:
             "args": [
                 "-g",
                 "-o",
-                "filename",
-                "filename.cpp"
+                "main",
+                "main.cpp"
             ],
             "group": {
                 "kind": "build",
