@@ -5,7 +5,7 @@ Please `mac` folder if you are a MacOS users and `windows` folder if you are a W
 
 2 - Configure your `.vscode`
 
-If you need to have header and implmentation files (i.e. `addition.h`, `addition.cpp`, and `main.cpp`), click link below
+If you need to have header and implementation files (i.e. `addition.h`, `addition.cpp`, and `main.cpp`), click link below
 [Modifying for Project Use with Header and Implementation files](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/header_and_implementation_files)
 
 # Table of Contents
