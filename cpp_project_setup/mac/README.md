@@ -9,10 +9,10 @@
 - [Workflow](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#workflow)
   - [Step by step]
 - [Contents of the Files](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#contents-of-the-files)
-  - [`c_cpp_properties.json`]()
-  - [`launch.json`]()
-  - [`settings.json`]()
-  - [`tasks.json`]()
+  - [`c_cpp_properties.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#c_cpp_propertiesjson)
+  - [`launch.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#c_cpp_propertiesjson)
+  - [`settings.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#c_cpp_propertiesjson)
+  - [`tasks.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#c_cpp_propertiesjson)
 - Modifying for Project Use with Header and Source and Implementation files
 
 ## Initial Setup
