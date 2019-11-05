@@ -1,5 +1,9 @@
 # MacOS C++ Project Setup in VS Code
 
+If you have Installed VS Code, C++, and a C++ Compiler, you can just download this `.vscode.zip` file and unzip in a project folder to use.
+
+[Download here](https://github.com/clarkngo/cpp-projects/blob/master/cpp_project_setup/mac/.vscode.zip)
+
 # Table of Contents
 - [Initial Setup](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#initial-setup)
   - [Installing C++ extension for VS Code](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#installing-c-extension-for-vs-code)
@@ -13,7 +17,7 @@
   - [`launch.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#c_cpp_propertiesjson)
   - [`settings.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#c_cpp_propertiesjson)
   - [`tasks.json`](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#c_cpp_propertiesjson)
-- Modifying for Project Use with Header and Source and Implementation files
+- [Modifying for Project Use with Header and Implementation files](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/header_and_implementation_files)
 
 ## Initial Setup
 ### Installing C++ extension for VS Code
