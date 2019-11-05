@@ -1,7 +1,9 @@
+// Author @Clark Jason Ngo
 #include <iostream>
 using namespace std;
 
 int main()
 {
-  return 0;
+    cout << "Hello";
+    return 0;
 }
