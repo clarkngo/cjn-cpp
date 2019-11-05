@@ -1,5 +1,20 @@
 # MacOS C++ Project Setup in VS Code
 
+# Table of Contents
+- [Initial Setup](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#initial-setup)
+  - [Installing C++ extension for VS Code](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#installing-c-extension-for-vs-code)
+  - [Working in the project folder](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#working-in-the-project-folder)
+  - [For MacOS users](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#for-macos-users)
+  - [Our first Hello](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#our-first-hello)
+- [Workflow](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#workflow)
+  - [Step by step]
+- [Contents of the Files](https://github.com/clarkngo/cpp-projects/tree/master/cpp_project_setup/mac#contents-of-the-files)
+  - [`c_cpp_properties.json`]()
+  - [`launch.json`]()
+  - [`settings.json`]()
+  - [`tasks.json`]()
+- Modifying for Project Use with Header and Source and Implementation files
+
 ## Initial Setup
 ### Installing C++ extension for VS Code
 1)	Open your VS Code. On the left side bar, click Extensions Icon. A search field will pop up, type c++ in the search field then hit Enter. A list will populate below the search field. Click C/C++ then a description on the right will appear. Click Install.
@@ -55,21 +70,15 @@ Open CS555_Fall_2019/IN/Yourname/Module1. ( File > Open )
 
 <img src="images/05.png" width="800" height="500"/>
 
-6)	This should create a c_cpp_properties.json file.
+6)	This should create a c_cpp_properties.json file. If not, feel free to create and copy. [Copy the code here](https://github.com/clarkngo/cpp-projects/blob/master/cpp_project_setup/mac/.vscode/c_cpp_properties.json)
 
 <img src="images/06.png" width="650" height="500"/>
 
-7)	Create the file launch.json and add the following code:
-
-Code here:
-https://gist.githubusercontent.com/clarkngo/f6639a7c0627314671b820a86e913fa3/raw/847cd4618e2b6f87e3554ebed42681a9368d30f6/launch.json
+7)	Create the file launch.json and add the following code: [Copy the code here](https://github.com/clarkngo/cpp-projects/blob/master/cpp_project_setup/mac/.vscode/launch.json)
 
 <img src="images/07.png" width="650" height="500"/>
 
-8)	Create the file tasks.json and add the following code:
- 
-Code here:
-https://gist.github.com/clarkngo/f6639a7c0627314671b820a86e913fa3#file-tasks-json
+8)	Create the file tasks.json and add the following code: [Copy the code here](https://github.com/clarkngo/cpp-projects/blob/master/cpp_project_setup/mac/.vscode/tasks.json)
 
 <img src="images/08.png" width="600" height="500"/>
 
@@ -83,7 +92,7 @@ https://gist.github.com/clarkngo/f6639a7c0627314671b820a86e913fa3#file-tasks-jso
 
 <img src="images/10.png" width="400" height="500"/>
 
-2)	Create a hello.cpp file. Please add the following code:
+2)	Create a `main.cpp` file. Please add the following code:
 
 <img src="images/11.png" width="500" height="300"/>
 
@@ -99,12 +108,12 @@ Click anywhere in the terminal to close the message.
 
 New files will be created.
 
-<img src="images/14.png" width="300" height="250"/>
+<img src="images/14.png" width="250" height="250"/>
 
 4)	Run the compiled c++ file (.out)
 
 ```
-./hello.out
+./main.out
 ```
 
 <img src="images/15.png" width="800" height="150"/>
@@ -112,10 +121,6 @@ New files will be created.
 ## Workflow
 
 1 -	Copy .vscode and add to your project folder
-
-2 -	Modify `launch.json`. Your program path should be `${workspaceFolder}/yourfilename.out`. Hit save.
-
-3 -	Modify `tasks.json`. Your arguments should include `yourfilename.cpp` and `yourfilename.out`. Hit save.
 
 ## Step by Step
 - Click `.vscode.zip`
@@ -130,25 +135,19 @@ Sample working C++ project directory structure
  |_ launch.json
  |_ settings.json
  |_ tasks.json
-|_ hello.cpp
+|_ main.cpp
 ```
 
 Note: You have to have `.vscode` folder and files in every C++ project folder.
 
-## Modifying for Project Use
-- To easily use this, just replace `filename` with your own, i.e. change to `hello`.
-- In `launch.json`:
-```
-            "program": "${workspaceFolder}/filename.out",
-```
 - In `tasks.json`:
 ```
             "args": [
                 "-std=c++17",
                 "-stdlib=libc++",
-                "filename.cpp",
+                "main.cpp",
                 "-o",
-                "filename.out",
+                "main.out",
                 "--debug"
 ```
 
@@ -156,7 +155,7 @@ Note: You have to have `.vscode` folder and files in every C++ project folder.
 
 The following files are included in .vscode:
 
-`c_cpp_properties.json`
+### `c_cpp_properties.json`
 
 ```
 {
@@ -178,7 +177,7 @@ The following files are included in .vscode:
 }
 ```
 
-`launch.json`
+### `launch.json`
 
 ```
 {
@@ -188,7 +187,7 @@ The following files are included in .vscode:
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/filename.out",
+            "program": "${workspaceFolder}/main.out",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
@@ -205,7 +204,7 @@ The following files are included in .vscode:
   }
 ```
 
-`settings.json`
+### `settings.json`
 
 ```
 {
@@ -216,7 +215,7 @@ The following files are included in .vscode:
 }
 ```
 
-`tasks.json`
+### `tasks.json`
 
 ```
 {
@@ -229,9 +228,9 @@ The following files are included in .vscode:
             "args": [
                 "-std=c++17",
                 "-stdlib=libc++",
-                "filename.cpp",
+                "main.cpp",
                 "-o",
-                "filename.out",
+                "main.out",
                 "--debug"
             ],
             "group": {
