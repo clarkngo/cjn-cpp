@@ -7,7 +7,6 @@ int main()
 {
     GuessingGame g1;
 
-    cout << g1.getPlayerNum();
-    cout << endl;
+    g1.run();
     return 0;	    	// exit code of the program
 }

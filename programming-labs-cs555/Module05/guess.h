@@ -8,9 +8,13 @@ class GuessingGame
         int _playerNum;
     public:
         GuessingGame();
+
         // SETTERS
-        void setPlayerNum(int playerNum);
+        void setPlayerNum();
+
         // GETTERS
-        int getPlayerNum();
+        int getPlayerNum() const;
+
+        bool isWinner();
         void run();
 };

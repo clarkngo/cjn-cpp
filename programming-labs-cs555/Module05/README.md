@@ -2,7 +2,7 @@
 Write a C++ program to implement the Number Guessing Game. In this game the computer chooses a random number between 1 and 100, and the player tries to guess the number in as few attempts as possible. Each time the player enters a guess, the computer tells him whether the guess is too high, too low, or right. Once the player guesses the number, the game is over.
 
 ## Video Walkthrough and Demo
-[![PL05 Demo](http://img.youtube.com/vi/TO_BE_UPDATED/0.jpg)](https://www.youtube.com/watch?v=TO_BE_UPDATED "PL05 Demo")
+[![PL05 Demo](http://img.youtube.com/vi/QnneGAf1cfU/0.jpg)](https://www.youtube.com/watch?v=QnneGAf1cfU "PL05 Demo")
 
 ## Project Location
 - https://github.com/clarkngo/cpp-projects/tree/master/programming-labs-cs555/Module05
@@ -24,66 +24,74 @@ Please follow instructions on:
 1. If a Windows user, please replace `.vscode` contents with `windows/.vscode`.
 2. VS Code Menu > Terminal > Run Build Task
 3. Run
-- Mac: `./time.out`
-- Windows powershell: `./time.exe`
-- Windows cmd: `time.exe`
+- Mac: `./main.out`
+- Windows powershell: `./main.exe`
+- Windows cmd: `main.exe`
 
 ## Project Requirements
 - C++
 
+## File Structure
+- `guess.h` header file
+- `guess.cpp` implementation file
+- `main.cpp` main program
+
 ## UI Requirements
+- user input in console
 - print output in console
 
 ## Program Flow
-- Execute program
-- Declare three `Time` objects named `time1`, `time2`, and `time3`
-- Set `time1` with hours and minutes
-- Set `time2` with hours and minutes
-- Assign the sum of `time1` and `time2` to `time3`
-- Display `time1`, `time2`, and `time3`
+- Execute main program
+- Intialize a `Guessing Game` object
+- Run the `Guessing Game` object
+  - Message prompt
+  - Keep asking user input if
+    - does not meet input validation
+    - wrong guess
+      - prompted `Too high!` if `guess > winningNum`
+      - prompted `Too low!` if `guess < winningNum`
+  - if user input matches `winningNum`
+  - prompt user `You win! ＼(＾O＾)／`
 - End of Program
 
 # Lessons Learned
+I was messing with ternary operators and trying to return a boolean value.
+
 Error:
 ```
-Undefined symbols for architecture x86_64:
-  "GuessingGame::getPlayerNum()", referenced from:
-      _main in main-2b5050.o
-  "GuessingGame::GuessingGame()", referenced from:
-      _main in main-2b5050.o
-ld: symbol(s) not found for architecture x86_64
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-The terminal process terminated with exit code: 1
+guess.cpp:38:33: warning: expression result unused [-Wunused-value]
+    _playerNum == _winningNum ? true : false;
+                                ^~~~
+guess.cpp:39:1: warning: control reaches end of non-void function [-Wreturn-type]
 ```
-`tasks.json` with linker error
+Code with error:
 ```
-"args": [
-    "-std=c++17",
-    "-stdlib=libc++",
-    "main.cpp",
-    "-o",
-    "main.out",
-    "--debug"
-],
+bool GuessingGame::isWinner()
+{
+    _playerNum == _winningNum ? true : false;
+}
 ```
-`tasks.json` adding the other `.cpp` file (`guess.cpp`) to compile as an additional argument to compile.
+Code that fixes error:
 ```
-"args": [
-    "-std=c++17",
-    "-stdlib=libc++",
-    "main.cpp",
-    "guess.cpp",
-    "-o",
-    "main.out",
-    "--debug"
-],
+bool GuessingGame::isWinner()
+{
+    return _playerNum == _winningNum ? true : false;
+}
 ```
-Source:
-- Error “ld: symbol not found for architecture x86_64”
-- Source: https://medium.com/@m.muizzsuddin_25037/error-ld-symbol-not-found-for-architecture-x86-64-a5e5b648ffc
 
 # Future Improvements
-- create a helper function for converting minutes that are equal or greater than 60 to add 1 hour
+- Have the `setPlayerNum()` function require a parameter
+- Use `try-catch` blocks
+
+# Classroom Learnings
+- Use a `const` in a getter function
+```
+int getX() const
+{
+  return x;
+}
+```
+Note: calling non-const within a const function will throw an error
 
 # Support
 Bug reports and feature requests can be filed here:
