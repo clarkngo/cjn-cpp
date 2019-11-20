@@ -16,6 +16,7 @@ void GuessingGame::setPlayerNum()
     int input;
     cout << "Enter a number from 1 to 100:\t";
     cin >> input;
+    // while
     while (cin.fail() || input < 1 || input > 100)
     {
         cin.clear();            // clear previous input

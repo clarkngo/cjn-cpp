@@ -9,6 +9,7 @@
                 "-std=c++17",
                 "-stdlib=libc++",
                 "main.cpp",
+                "guess.cpp",
                 "-o",
                 "main.out",
                 "--debug"

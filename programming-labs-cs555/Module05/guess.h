@@ -15,6 +15,8 @@ class GuessingGame
         // GETTERS
         int getPlayerNum() const;
 
+        // check if player wins
         bool isWinner();
+        // run the game
         void run();
 };
