@@ -1,0 +1,327 @@
+WEB DEVELOPMENT 101: Understanding The Basics
+
+web-development-basics
+kyle-prinsloo by Kyle Prinsloo       Last updated Feb. 21, 2017
+
+
+You’ve probably searched the internet on how basic web development works and you got the answers you were looking for in under 5 minutes.
+
+
+If only it were that easy…
+
+
+Web Development 101: Understanding The Basics will explain in ‘simple English’ what you need to know about how the internet world works.
+
+
+If you are a pro at this already, then this article is probably not for you.
+
+
+This article is for you if:
+
+You want to create websites but have no idea what it involves.
+You have no idea how to make a website live on the internet.
+You want a step by step overview on the basics.
+You like chicken curry.
+
+It’s no secret…
+
+
+Learning web development can be very strange if you don’t have the right foundation at first. I hope to make it easier for you as you read along.
+
+
+The good news is that you have taken the first step in deciding to be a web developer and to change your life!
+
+
+Always remember… every single hard-core programmer was also once a noob.
+
+
+This image illustrates where you are now and where you will end up:
+
+before-and-after-web-development-101
+
+Key takeaways from this article:
+
+
+An overview of the essentials
+What is web development?
+What is a website?
+What are web pages?
+What are hyperlinks?
+What is an IP address?
+What is a domain how to get one?
+What is hosting?
+Creating a website
+Essential tools
+What is an FTP client?
+Step by step instructions on how upload a website to the internet
+
+So let’s get into it:
+
+
+Web Development
+Web Development in the most simplistic term means to create a website for the Internet.
+
+
+There are plenty of websites out there and just like a painting is created by a painter, a website is essentially built by web developers and web designers.
+
+
+This is a basic example of coding:
+
+example.com-code-example
+
+
+This looks a bit like ancient wingding language if you are a newbie, but this ‘random’ code is what powers a fully functional website. Take a look here for the live website of this code.
+
+
+Go to any website and press Ctrl+U (for Windows) or Cmd+U (for Mac) to see what’s called the ‘source code’ of a website.
+
+
+While web developers are responsible for the coding and programming aspect of a website, the web designers design the theme, layout, images and decide the color scheme of the website, which is then used by a web developer in putting together the website.
+
+
+It’s highly beneficial to have a fair amount of designing knowledge like:
+
+Basic Photoshop skills.
+Typography (which is basically your font choice and layout of text).
+How you use colours.
+
+What is a web page?
+A web page is simply an electronic page that is a part of a book which in this case is a website.
+
+
+A website is composed of several web pages. These web pages are a combination of text, images, videos and links. Web pages are often linked to each other through hyperlinks (more detail below).
+
+
+
+web-page-example
+So a web page is one single page of information whereas a website is made up of a number of web pages.
+
+
+What is a hyperlink?
+A hyperlink is a link that is hyper-active. OK, that was a bad joke.
+
+
+It is actually a link that directs you to a different page on the same website or a different website altogether.
+
+
+If you move your cursor over the text it would often change to a ‘finger’ or sometimes the color of the text would change and an underline would appear.
+
+
+To see a hyperlink in action, click here.
+
+
+What is a web browser?
+Web browsers are software applications that you use to access everything on the World Wide Web (commonly known as the internet).
+
+
+Examples of web browsers would be: Google Chrome, Apple Safari, Opera and Internet Explorer.
+
+
+What is a search engine?
+Search engines let a user locate relevant websites based on the phrases and keywords entered by the user.
+
+
+Think of the World Wide Web (the internet) as a library of websites and you are looking for something specific, you then do search on a search engine.
+
+
+Some common search engines are: Google, Bing and Yahoo.
+
+
+What is an IP address?
+An IP address is a unique numerical address that identifies every computing device like personal computers, tablets, smart phones etc. to communicate with other devices in the IP network.
+
+
+It’s basically a cellphone number for your laptop or like a number plate for a car.
+
+How it works:
+The server receives a request for a page sent by your web browser. The browser connects to the server using an IP address. In return, the server sends back the requested page back to your IP address.
+
+
+To find your IP Address, check out:
+whatismyipaddress.com
+
+
+What is a domain?
+A domain is your ‘property’ on the internet.
+
+
+So for example, my ‘home’ is: www.studywebdevelopment.com – I own SWD, this is my domain. No two websites can have the same domain name.
+
+
+This is the address people will use to visit your ‘home’ which is your website. An URL (Uniform Resource Locator,) carries the domain name.
+
+
+A domain name consists of a top-level and a second-level domain. A top-level domain extension (TLD) is the part of the domain name located to the right of the dot (".") like .com, .net, and .org.
+
+
+A TLD identifies something about the website associated with it, such as its purpose, the organization that owns it or the geographical area where it originates, like .com is mostly used for commercial purposes while .edu is used for educational institutions.
+
+
+Just like you would go through a property agent to buy a property, you need to go through a hosting provider to buy a domain. I recommend Bluehost for purchasing your domain.
+
+
+What is website hosting?
+You have your coded website (more details below on how to do that) on your laptop and you need to get it live on the internet…
+
+
+It doesn’t just get there; it needs to be ‘hosted’ on the internet. You do this through a hosting provder.
+
+
+A web hosting provider offers a service that allows us to make our website accessible to anyone who goes to our domain on the internet.
+
+
+So we need to register/purchase a domain from a hosting provider and then ALSO purchase a hosting service as well. These are two DIFFERENT things altogether. A domain is paid annually and hosting is mostly paid monthly/quarterly/yearly.
+
+
+Both of these services can be purchased from Bluehost.
+
+
+They offer a free domain registration, a money back guarantee, 24/7 support, advertising offers and more. Click here to view more details.
+
+
+
+web-development-ebook
+
+
+
+How to create a website?
+Now comes the fun part... creating your own website.
+
+
+This is the most important part of any website.
+
+If I had to chop down a tree in 6 hours, I’d spend the first 4 hours sharpening my axe.
+
+Abraham Lincoln
+You need to decide what type of website you’d like to have. Here’s a simple and brief overview:
+
+
+You can either use a CMS (Content Management System) which allows you to create, upload, edit and modify your content that is displayed on a website which is ideal for blogs.
+
+
+It just makes things a lot easier since you don't really need coding knowledge, but it's a bonus if you do. You can choose from a variety of themes, both paid and free.
+
+
+Some popular CMS’s are: Wordpress, Drupal and Joomla.
+
+
+If you don’t want a CMS and you like to live dangerously and be adventurous (like most developers out there) then you need to start with a good text editor.
+
+
+
+What is a text editor?
+A text editor is a program where you write your code.
+
+
+You can write code for HTML, CSS, JavaScript, Python, PHP, Ruby etc. It is essential that you choose a good text editor when you start. A good text editor can increase productivity and development speed considerably and it makes you more efficient.
+
+
+PS – To master these text editors and to learn keyboard shortcuts, just go to YouTube and look for short tutorials. You can thank me later.
+
+
+
+Here are few popular text editors:
+
+
+sublime-text-editor
+
+Sublime is a really cool editor that is fast and simple. It’s amazing for beginners and professionals.
+
+
+Download it here.
+
+
+notepad-text-editor
+
+Notepad++ is very simple, friendly and clean. Some cool features are Syntax Highlighting and Syntax Folding, Search/Replace, Auto-completion and more. It's for Windows users only so Mac users may get a bit upset.
+
+
+You can download it here.
+
+
+
+atom-text-editor
+
+Atom comes from Git and it's available for Mac, Windows and Linux. It is very promising with features like auto-completion, multiple panes, line numbers, multiple file support, search/replace features and more.
+
+
+You can download it here.
+
+
+brackets-text-editor
+
+Brackets is a lightweight and powerful text editor originally developed by Adobe. It comes with some really handy features like quick edit, live preview, color selector and more.
+
+
+You can download it here.
+
+
+Now that you have a domain, a hosting provider and your text editor you need to upload the website code from your text editor to your hosting provider like Bluehost in this case.
+
+
+How to upload a website to the internet?
+Once you've designed your website in the text editor you choose above, you need to upload it to your hosting provider.
+
+
+You don’t just copy and paste your text editor code into the Bluehost platform, you need a ‘middle-man’ to do this.
+
+
+You do this by using what’s call a FTP client.
+
+
+I highly recommend FileZilla as your FTP client. It's 100% free and extremely popular.
+
+
+Download FileZilla here.
+
+
+You will need to use your FTP username and password which your hosting provider sent you via email.
+
+
+Once you've downloaded it, you will be provided with something that looks like this:
+
+
+filezillaftpprogram
+
+
+Enter the hostname of your domain into the Host field and also fill out the Username and Password fields as provided to you by your hosting service provider.
+
+
+You can leave the Port field blank, unless otherwise specified by your hosting provider in which case you need to enter the port number provided.
+
+
+Then click on Quickconnect
+
+
+filezillaquickconnect
+
+
+Once connected, you need to browse to your website files (on the left pane below) and then drag and drop them into the public.html folder (on the right pane below).
+
+
+filezillapublic
+
+
+At the bottom of the FileZilla window, you will see 'Queued files', 'Failed transfers' and 'Successful transfers'.
+
+
+filezillatransfers
+
+
+Once the queue is empty and all files are under Successful transfers, your website should now be live on your domain.
+
+
+
+I won’t go into more detail on this post because I mention so many juicy and helpful things in my eBook: Web Development & Beyond. Make sure you download it for FREE here.
+
+
+You have covered the basics of how to get your website online - this calls for a glass of champagne :)
+
+
+Now that you are online, the most important thing is to create an incredible website, and one which achieves the goals you created it for.
+
+
+This is only the beginning… you have many questions and I answer it in my FREE eBook.
+
+
+It has received hundreds of positive testimonials and it will help you in this online journey. Read more here.
