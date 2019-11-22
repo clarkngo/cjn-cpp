@@ -9,7 +9,7 @@
                 "-std=c++17",
                 "-stdlib=libc++",
                 "main.cpp",
-                "array.cpp",
+                "Array.cpp",
                 "-o",
                 "main.out",
                 "--debug"

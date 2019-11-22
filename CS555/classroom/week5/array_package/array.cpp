@@ -1,77 +1,101 @@
 // Author @Clark Jason Ngo
 // #include "stdafx.h"
-#include <iostream>
-#include "array.h"
+#include "Array.h"
 using namespace std;
 
-Array::Array(int i)
+Array::Array(int nSize)
 {
-    // range validation for array size < 1
-    if(i <= 0)
+    if(nSize > 0)
     {
-        cout << "I am resizing the array to 10 elements" << endl;
-        m_nSize = 10;
+        m_nSize = nSize;
     }
     else
     {
-        m_nSize = i;
+        m_nSize = 1;
     }
+    m_nData = new int[m_nSize];
 
-    m_nData = new int(m_nSize);
-
-    for(int j = 0; j < m_nSize; j++)
+    for(int i = 0; i < m_nSize; i++)
     {
-        m_nData[j] = 0;
+        m_nData[i] = 0;
     }
 }
 
 Array::~Array()
 {
-    // checks if memory is allocated
     if(m_nData != nullptr)
     {
         delete m_nData;
     }
 }
 
-int Array::len()
+// overload = to copy elements of an array object to another array object
+Array&Array::operator=(const Array &ArrayCopy)
 {
-    return m_nSize;
+    if(m_nSize != ArrayCopy.m_nSize)
+    {
+        delete [] m_nData;
+        m_nSize = ArrayCopy.m_nSize;
+        m_nData = new int[m_nSize];
+    }
+    for(int i = 0; i < m_nSize; i++)
+        m_nData[i] = ArrayCopy.m_nData[i];
+
+    return *this;
 }
 
-void Array::print()
+// overload [] to assign values into an array object
+int &Array::operator[](int nIndex)// returning a reference object
 {
-    for(int j = 0; j < m_nSize; j++)
-    {
-        cout << m_nData[j] << endl;
-    }
-}
-int &Array::operator[](int nIndex)
-{
-    if(nIndex >= m_nSize || nIndex < 0)
+    if(nIndex < 0 || nIndex >= m_nSize)
     {
         nIndex = 0;
-        cout << "Invalid index!" << endl;
     }
-    cout << "Value is " << this->m_nData[nIndex] << endl;
-    return this->m_nData[nIndex];
+    return (m_nData[nIndex]); // storing the element to m_nData[] inside
 }
 
-Array &Array::operator=(const Array &ArrayCopy)
+// print the elements of the array
+void Array::print()
 {
-    Array newArray(ArrayCopy.m_nSize);
-
-    for (int i = 0; i < ArrayCopy.m_nSize; i++)
-    {
-        newArray.m_nData[i] = ArrayCopy.m_nData[i];
-    }
-    return newArray;
+    for(int i = 0; i < m_nSize; i++)
+        cout << m_nData[i] << endl;
+    return;
 }
-// Array(int nSize = 10);
-// int len();
-// void print();
-// Array &add(const Array &ArrayRight);
-// Array &operator=(const Array &ArrayCopy);
-// bool &operator==(const Array& rhs);
 
-// int &operator[](int nIndex);
+// return the size of array object
+int Array::len()
+{
+    int size;
+    size = m_nSize;
+    return size;
+}
+
+// add elements of two array objects in their same indices
+Array&Array::add(const Array &RHS)
+{
+    for (int i = 0; i < this->m_nSize; i++)
+    {
+        this->m_nData[i] += RHS.m_nData[i];
+    }
+    return *this;
+}
+
+
+bool Array::operator==(const Array& RHS) // RHS = right hand side
+{
+    bool bRet = true;
+
+    //
+    // your implementation for comparison (*this == RHS)
+    //
+    for (int i = 0; i < this->m_nSize; i++)
+    {
+        if (this->m_nData[i] != RHS.m_nData[i])
+        {
+            bRet = false;
+            return bRet;
+        }
+    }
+
+    return bRet;
+}
