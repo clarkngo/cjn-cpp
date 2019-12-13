@@ -109,7 +109,6 @@ QueueNode* deQueue(Queue* queue)
 
 	queue->front = queue->front->next;	// front pointer will point to the next front node
 
-
 	if (queue->front == NULL)		// this means the only node was removed and front is now pointing to NULL
 			queue->back = NULL;			// have back pointer to point to NULL as well
 	return node;								// return the removed node
@@ -125,15 +124,15 @@ QueueNode* deQueue(Queue* queue)
 	STACK NODE
 */
 
-// class QueueNode that hold and two integers and a pointer.
+// class StackNode that hold and two integers and a pointer.
 class StackNode {
     public:
         int number;				// student number
-				int age;					// student ag
+				int age;					// student age
         StackNode* next;
 };
 
-// Create a New QueueNode and takes a two integer values as a parameter
+// Create a New StackNode and takes a two integer values as a parameter
 StackNode* newStackNode(int number, int age)
 {
 		StackNode* node = new StackNode();		// create a new node
@@ -142,7 +141,6 @@ StackNode* newStackNode(int number, int age)
 		node->next = NULL;					// assign NULL value to new node's "next" data member
 		return node;								// return node with value and pointer
 }
-
 
 /*
 	STACK
@@ -173,8 +171,7 @@ void push(Stack* stack, int number, int age)
 				stack->top = node;		// top pointer will point to first node
 				return;							  // exit the function
 		}
-
-		stack->top->next = node;	// have the top node point to the new node
+		node->next = stack->top;	// have the top node point to the new node
 		stack->top = node;				// make the new node the top node
 }
 
@@ -189,7 +186,6 @@ StackNode* pop(Stack* stack)
 	delete(node);						  		// delete the front top node
 
 	stack->top = stack->top->next;	// top pointer will point to the next second top node
-
 	return node;								// return the removed node
 }
 
@@ -201,19 +197,21 @@ int main()
 		enQueue(myQueue, 20);							// add node to the back of the queue
 		QueueNode* nodeQueue = deQueue(myQueue);	// remove node from the front of the queue
 		if (nodeQueue != NULL)						// if node has value
-				cout << "Dequeued item is " << nodeQueue->value;
-		cout << endl;
+				cout << "Dequeued item is " << nodeQueue->value << endl;
 
 		Stack* myStack = createStack();		// create empty stack
 		push(myStack, 1001, 28); // add student number and student age as a node and push at the top of the stack
 		push(myStack, 1021, 30); // add student number and student age as a node and push at the top of the stack
 		StackNode* nodeStack = pop(myStack);	// remove the node from the top of the stack
 		if (nodeStack != NULL)	 // if node has value
-				cout << "Popped item is " << nodeStack->number;
-		cout << endl;
+				cout << "Popped item is " << nodeStack->number  << endl;
+		StackNode* nodeStack2 = pop(myStack);	// remove the node from the top of the stack
+		if (nodeStack2 != NULL)	 // if node has value
+				cout << "Popped item is " << nodeStack2->number  << endl;
 		return 0;
 }
 
 // Sample Output:
 // Dequeued item is 10
-// Popped item is 102
+// Popped item is 1021
+// Popped item is 1001
